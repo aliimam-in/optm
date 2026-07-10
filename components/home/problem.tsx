@@ -7,17 +7,20 @@ export function ProblemSection() {
 
             <div className="relative flex flex-col h-full space-y-6 justify-center items-center">
                 <Badge>
-                    The Problem
+                Why does Pain Return?
+
                 </Badge>
 
                 <div className="max-w-md md:max-w-3xl text-center px-8">
                     <h1
                         className="font-heading text-2xl font-semibold text-black leading-tight md:text-3xl">
-                        The system waits <br/> until it is too late.
+                        Pain Is a Symptom. <br/> The Root Cause Often Goes Undetected.
+
                     </h1>
 
                     <p className="mt-6 text-sm leading-6 text-black/60">
-                        Chronic pain and metabolic disease are managed in brief, separate appointments. Between visits, inflammation compounds, cartilage degrades, and muscle mass declines silently. Nobody is measuring what is happening in between.
+                    Traditional treatments often focus on relieving pain. OPTM uses AI diagnostics, biomarker analysis, and muscle health assessment to uncover the biological factors behind recurring pain.
+
                     </p>
                 </div>
                 <div className="grid md:max-w-3xl mt-10 md:grid-cols-2 ">

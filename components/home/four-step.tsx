@@ -67,7 +67,8 @@ export function FourStepSection() {
                     <div className="relative mt-10 flex flex-col h-full justify-center items-center">
 
                         <Badge>
-                            The Problem
+                        The OPTM Method
+
                         </Badge>
 
 

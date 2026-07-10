@@ -30,11 +30,12 @@ export function MuscleAgeSection() {
                     <div className="max-w-md md:max-w-3xl text-center px-8">
                         <h1
                             className="font-heading text-2xl font-semibold text-black leading-tight md:text-3xl">
-                            Meet your Muscle Age.
+                            Discover Your Muscle Age
                         </h1>
 
                         <p className="mt-6 text-sm leading-6 text-black/60">
-                            Everyone has two ages — the one on your birth certificate, and the one your muscles are actually living. The Bio-Musculo Index™, built on 45 years of research by Dr. Apurba Ganguly, measures the second one, from a single blood sample.
+                        The Missing Insight Behind Chronic Pain
+
                         </p> 
                     </div>
                 </div>
@@ -70,7 +71,8 @@ export function MuscleAgeSection() {
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="support">
-                            <AccordionTrigger className={" hover:no-underline"}>Wear vs. repair
+                            <AccordionTrigger className={" hover:no-underline"}>Damage vs Repair 
+
                                 <Badge variant={"outline"}>
                                     Bone & Cartilage
                                 </Badge>

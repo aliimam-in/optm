@@ -1,5 +1,6 @@
  
 import { ApproachSection } from "@/components/home/approach"
+import { ConditionsSection } from "@/components/home/conditions"
 import { ContactSection } from "@/components/home/contact"
 import { DoctorsSection } from "@/components/home/doctor"
 import { FourStepSection } from "@/components/home/four-step"
@@ -32,6 +33,7 @@ export default function Page() {
       <MuscleAgeSection />
       <ProblemSection />
       <FourStepSection />
+      <ConditionsSection/>
       <ProtocolSection/>
       <ApproachSection/>
       <NumberSection/>
