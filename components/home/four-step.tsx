@@ -13,14 +13,57 @@ import {
     CompareSliderBefore,
     CompareSliderHandle,
 } from "@/components/ui/compare-slider";
-import { HugeiconsIcon } from "@hugeicons/react";
-import { ChevronDoubleCloseIcon } from "@hugeicons/core-free-icons";
+import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+} from "@/components/ui/popover";
+
+
+const biomarkers = [
+    {
+        title: "CTX-II",
+        description:
+            "A fragment of cross-linked type II collagen, reflecting cartilage degradation and enabling assessment of joint tissue turnover.",
+    },
+    {
+        title: "COMP",
+        description:
+            "Cartilage oligomeric matrix protein, a biomarker of cartilage damage and osteoarthritis progression.",
+    },
+    {
+        title: "IL-6",
+        description:
+            "An inflammatory cytokine associated with joint inflammation and immune response.",
+    },
+    {
+        title: "hs-CRP",
+        description:
+            "High-sensitivity C-reactive protein, indicating systemic inflammation.",
+    },
+    {
+        title: "CK-MM",
+        description:
+            "A skeletal muscle enzyme used to assess muscle damage.",
+    },
+    {
+        title: "Aldolase A",
+        description:
+            "An enzyme involved in muscle metabolism and muscle health assessment.",
+    },
+    {
+        title: "OrthoAGE™",
+        description:
+            "A proprietary score representing musculoskeletal biological age.",
+    },
+];
+
 
 export function FourStepSection() {
     return (
         <section className="relative m-3">
             <Tabs defaultValue="1">
-                <div className="relative w-full mx-auto max-w-5xl border border-b-0 py-10 mx-auto border-[#D5BBEA]/60 rounded-t-[40px]">
+                <div className="relative w-full mx-auto max-w-5xl border border-b-0 py-10 mx-auto border-[#D5BBEA]/60 rounded-t-xl md:rounded-t-[30px]">
                     <div className="relative mt-10 flex flex-col h-full justify-center items-center">
 
                         <Badge>
@@ -56,7 +99,7 @@ export function FourStepSection() {
 
                     <CompareSlider
                         defaultValue={40}
-                        className="relative w-full aspect-[16/8] overflow-hidden rounded-none md:rounded-3xl"
+                        className="relative w-full aspect-[16/8] overflow-hidden rounded-none md:rounded-[30px]"
                     >
                         <CompareSliderBefore>
                             <img
@@ -77,10 +120,10 @@ export function FourStepSection() {
                     </CompareSlider>
 
                 </TabsContent>
-                <TabsContent value="2" className={"relative h-full -mt-3 w-full mx-auto max-w-7xl"}><div className="rounded-3xl">
+                <TabsContent value="2" className={"relative h-full -mt-3 w-full mx-auto max-w-7xl"}>
                     <CompareSlider
                         defaultValue={40}
-                        className="relative w-full aspect-[16/8] overflow-hidden rounded-none md:rounded-3xl"
+                        className="relative w-full aspect-[16/8] overflow-hidden rounded-none md:rounded-[30px]"
                     >
                         <CompareSliderBefore>
                             <img
@@ -99,12 +142,12 @@ export function FourStepSection() {
                         </CompareSliderAfter>
                         <CompareSliderHandle />
                     </CompareSlider>
-                </div>
+
                 </TabsContent>
-                <TabsContent value="3" className={"relative h-full -mt-3 w-full mx-auto max-w-7xl"}><div className="rounded-3xl">
+                <TabsContent value="3" className={"relative h-full -mt-3 w-full mx-auto max-w-7xl"}>
                     <CompareSlider
                         defaultValue={40}
-                        className="relative w-full aspect-[16/8] overflow-hidden rounded-none md:rounded-3xl"
+                        className="relative w-full aspect-[16/8] overflow-hidden rounded-none md:rounded-[30px]"
                     >
                         <CompareSliderBefore>
                             <img
@@ -123,12 +166,12 @@ export function FourStepSection() {
                         </CompareSliderAfter>
                         <CompareSliderHandle />
                     </CompareSlider>
-                </div>
+
                 </TabsContent>
-                <TabsContent value="4" className={"relative h-full -mt-3 w-full mx-auto max-w-7xl"}><div className="rounded-3xl">
+                <TabsContent value="4" className={"relative h-full -mt-3 w-full mx-auto max-w-7xl"}>
                     <CompareSlider
                         defaultValue={40}
-                        className="relative w-full aspect-[16/8] overflow-hidden rounded-none md:rounded-3xl"
+                        className="relative w-full aspect-[16/8] overflow-hidden rounded-none md:rounded-[30px]"
                     >
                         <CompareSliderBefore>
                             <img
@@ -147,68 +190,45 @@ export function FourStepSection() {
                         </CompareSliderAfter>
                         <CompareSliderHandle />
                     </CompareSlider>
-                </div>
+
                 </TabsContent>
             </Tabs>
-            <div className="w-full border border-t-0 py-10 border-[#D5BBEA]/60 rounded-b-[40px] mx-auto max-w-5xl flex flex-wrap gap-1 justify-center mb-6">
-                <HoverCard>
-                    <HoverCardTrigger delay={40} className={"cursor-pointer"}>
-                        <Badge variant={"outline"}>
-                            CTX-II
-                        </Badge>
-                    </HoverCardTrigger>
-                    <HoverCardContent>
-                        A fragment of cross-linked type II collagen, reflecting cartilage degradation and enabling assessment of joint tissue turnover. Key features and values.
-                    </HoverCardContent>
-                    <HoverCardTrigger delay={40} className={"cursor-pointer"}>
-                        <Badge variant={"outline"}>
-                            COMP
-                        </Badge>
-                    </HoverCardTrigger>
-                    <HoverCardContent>
-                        A fragment of cross-linked type II collagen, reflecting cartilage degradation and enabling assessment of joint tissue turnover. Key features and values.
-                    </HoverCardContent>
-                    <HoverCardTrigger delay={40} className={"cursor-pointer"}>
-                        <Badge variant={"outline"}>
-                            IL-6
-                        </Badge>
-                    </HoverCardTrigger>
-                    <HoverCardContent>
-                        A fragment of cross-linked type II collagen, reflecting cartilage degradation and enabling assessment of joint tissue turnover. Key features and values.
-                    </HoverCardContent>
-                    <HoverCardTrigger delay={40} className={"cursor-pointer"}>
-                        <Badge variant={"outline"}>
-                            hs-CRP
-                        </Badge>
-                    </HoverCardTrigger>
-                    <HoverCardContent>
-                        A fragment of cross-linked type II collagen, reflecting cartilage degradation and enabling assessment of joint tissue turnover. Key features and values.
-                    </HoverCardContent>
-                    <HoverCardTrigger delay={40} className={"cursor-pointer"}>
-                        <Badge variant={"outline"}>
-                            CK-MM
-                        </Badge>
-                    </HoverCardTrigger>
-                    <HoverCardContent>
-                        A fragment of cross-linked type II collagen, reflecting cartilage degradation and enabling assessment of joint tissue turnover. Key features and values.
-                    </HoverCardContent>
-                    <HoverCardTrigger delay={40} className={"cursor-pointer"}>
-                        <Badge variant={"outline"}>
-                            Aldolase A
-                        </Badge>
-                    </HoverCardTrigger>
-                    <HoverCardContent>
-                        A fragment of cross-linked type II collagen, reflecting cartilage degradation and enabling assessment of joint tissue turnover. Key features and values.
-                    </HoverCardContent>
-                    <HoverCardTrigger delay={40} className={"cursor-pointer"}>
-                        <Badge variant={"outline"}>
-                            OrthoAGE™
-                        </Badge>
-                    </HoverCardTrigger>
-                    <HoverCardContent>
-                        A fragment of cross-linked type II collagen, reflecting cartilage degradation and enabling assessment of joint tissue turnover. Key features and values.
-                    </HoverCardContent>
-                </HoverCard>
+            <div className="w-full border border-t-0 py-10 border-[#D5BBEA]/60 rounded-b-xl md:rounded-b-[30px] mx-auto max-w-5xl flex flex-wrap gap-1 justify-center mb-6">
+
+                <div className="hidden md:flex flex-wrap gap-1 justify-center">
+                    {biomarkers.map((item, index) => (
+                        <HoverCard key={index}>
+                            <HoverCardTrigger delay={40} className={"cursor-pointer"}>
+                                <Badge variant="outline" className="cursor-pointer">
+                                    {item.title}
+                                </Badge>
+                            </HoverCardTrigger>
+                            <HoverCardContent>
+                                <p className="text-sm">{item.description}</p>
+                            </HoverCardContent>
+                        </HoverCard>
+                    ))}
+                </div>
+                {biomarkers.map((item) => (
+                    <div key={item.title} className="md:hidden">
+                        <Popover>
+                            <PopoverTrigger>
+                                <Badge
+                                    variant="outline"
+                                    className="cursor-pointer"
+                                >
+                                    {item.title}
+                                </Badge>
+                            </PopoverTrigger>
+
+                            <PopoverContent className="w-60 shadow-none">
+                                <p className="text-sm text-black/60">
+                                    {item.description}
+                                </p>
+                            </PopoverContent>
+                        </Popover>
+                    </div>
+                ))}
             </div>
         </section>
     );

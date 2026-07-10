@@ -98,7 +98,7 @@ export function ProtocolSection() {
                         <StepperContent
                             key={step.value}
                             value={step.value}
-                            className="flex flex-col items-center gap-4 border-[#D5BBEA]/60 rounded-[40px] border bg-card p-10 text-card-foreground"
+                            className="flex flex-col items-center gap-4 border-[#D5BBEA]/60 rounded-xl border bg-card p-10 text-card-foreground"
                         >
                             <div className="flex flex-col items-center gap-4 text-center">
                                 <p className="text-md font-semibold text-black uppercase">

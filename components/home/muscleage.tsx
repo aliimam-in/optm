@@ -11,12 +11,12 @@ import { Badge } from "../ui/badge";
 export function MuscleAgeSection() {
     return (
         <section className="relative m-3 ">
-            <div className="relative p-3 border mx-auto border-[#D5BBEA]/60 rounded-[30px] max-w-5xl">
+            <div className="relative p-3 border mx-auto border-[#D5BBEA]/60 rounded-xl md:rounded-[30px] max-w-5xl">
                 <div className="relative flex flex-col h-full justify-center items-center">
 
                     <div className="relative flex flex-col justify-center mt-10 items-center h-40 w-80">
 
-                        <div className="border border-[#D5BBEA]/60 rounded-3xl mb-8 absolute h-32 w-32" />
+                        <div className="border border-[#D5BBEA]/60  rounded-xl md:rounded-3xl mb-8 absolute h-32 w-32" />
                         <Image
                             src="/new/muscle.png"
                             alt="Hero"
@@ -45,7 +45,7 @@ export function MuscleAgeSection() {
                         alt="Hero"
                         width={200}
                         height={200}
-                        className="object-contain rounded-3xl border h-fit w-full"
+                        className="object-contain  rounded-xl md:rounded-3xl border h-fit w-full"
                     />
                     <Accordion defaultValue={["shipping"]} className=" rounded-none border-none w-full">
                         <AccordionItem value="shipping">
@@ -65,7 +65,8 @@ export function MuscleAgeSection() {
                                 </Badge>
                             </AccordionTrigger>
                             <AccordionContent>
-                            Vitamin D, PTH and calcium levels show how well your bones and muscles are actually functioning.
+                            Osteocalcin, Vitamin D, and PTH reveal the biological processes driving bone loss and impaired bone remodeling
+
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="support">

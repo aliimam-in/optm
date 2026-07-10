@@ -1,5 +1,12 @@
 import { cn } from "@/lib/utils";
 import { Badge } from "../ui/badge";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel"
 
 export function NumberSection() {
     return (
@@ -35,7 +42,7 @@ export function NumberSection() {
                                 93%
                             </h1>
                             <p className="mt-4 text-md leading-6 text-white/80">
-                            of patients report significant pain reduction at day 90
+                                of patients report significant pain reduction at day 90
                             </p>
 
                         </div>
@@ -45,7 +52,7 @@ export function NumberSection() {
                                 ↓ 44%
                             </h1>
                             <p className="mt-4 text-md leading-6 text-white/80">
-                            average drop in CRP within 3 weeks of GLP-1
+                                average drop in CRP within 3 weeks of GLP-1
                             </p>
 
                         </div>
@@ -55,31 +62,53 @@ export function NumberSection() {
                                 3X
                             </h1>
                             <p className="mt-4 text-md leading-6 text-white/80">
-                            biomarker retests confirm biological reversal - not symptom relief
+                                biomarker retests confirm biological reversal - not symptom relief
                             </p>
 
                         </div>
                     </div>
-                    <div className="h-full p-3 pt-0 md:pt-3 md:pl-0 w-full">
-                        <div className="flex rounded-xl flex-col h-full w-full bg-white aspect-square p-8">
-                            <h1
-                                className="font-heading text-xl font-semibold text-black leading-tight md:text-3xl">
-                                "When I was told I might need knee replacement surgery, I felt like I had run out of options. OPTM helped me understand my condition and guided me through a personalized recovery journey."
-                            </h1>
-                            <p className="mt-10 text-lg leading-6 text-black">
-                            Ravi Mehta, 51
-                            </p>
+                    <Carousel className="h-full p-3 pt-0 md:pt-3 md:pl-0 w-full">
+                        <CarouselContent>
+                            <CarouselItem>
+                                <div className="flex rounded-xl flex-col h-full w-full bg-white aspect-square p-8">
+                                    <h1
+                                        className="font-heading text-xl font-semibold text-black leading-tight md:text-3xl">
+                                        "When I was told I might need knee replacement surgery, I felt like I had run out of options. OPTM helped me understand my condition and guided me through a personalized recovery journey."
+                                    </h1>
+                                    <p className="mt-10 text-lg leading-6 text-black">
+                                        Ravi Mehta, 51
+                                    </p>
 
-                            <p className="mt-4 text-sm leading-6 text-black/60">
-                            South Delhi · Osteoarthritis + metabolic syndrome
-                            </p>
+                                    <p className="mt-4 text-sm leading-6 text-black/60">
+                                        South Delhi · Osteoarthritis + metabolic syndrome
+                                    </p> 
+                                </div>
+                            </CarouselItem>
+                            <CarouselItem>
+                                <div className="flex rounded-xl flex-col h-full w-full bg-white aspect-square p-8">
+                                    <h1
+                                        className="font-heading text-xl font-semibold text-black leading-tight md:text-3xl">
+                                        "When I was told I might need knee replacement surgery, I felt like I had run out of options. OPTM helped me understand my condition and guided me through a personalized recovery journey."
+                                    </h1>
+                                    <p className="mt-10 text-lg leading-6 text-black">
+                                        Ravi Mehta, 51
+                                    </p>
 
+                                    <p className="mt-4 text-sm leading-6 text-black/60">
+                                        South Delhi · Osteoarthritis + metabolic syndrome
+                                    </p> 
+                                </div>
+                            </CarouselItem>
+                            
+                        </CarouselContent>
+                        <div className="absolute w-full flex -bottom-20 right-0 z-50 flex md:justify-end justify-center items-center gap-3">
+                            <CarouselPrevious className="static size-12 shadow-none translate-y-0" />
+                            <CarouselNext className="static size-12 shadow-none translate-y-0" />
                         </div>
-                    </div>
+                    </Carousel>
+
                 </div>
-            </div>
-
-
+            </div> 
         </section>
     );
 }
